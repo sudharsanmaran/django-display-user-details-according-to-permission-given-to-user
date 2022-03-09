@@ -30,6 +30,6 @@ class profile(abstractclass):
     empCode= models.CharField(max_length=10,null=True,blank=True)
     phoneNo= models.CharField(max_length=15,null=True,blank=True)
     position= models.CharField(max_length=20, choices=POSITION_TYPE,null=True,blank=True)
-    # to encrypte name field
+    # to get name field of respective object instead of pointer to it
     def __str__(self):
         return self.name
