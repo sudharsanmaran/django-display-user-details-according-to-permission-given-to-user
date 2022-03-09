@@ -1,0 +1,17 @@
+{% extends "register/base.html" %}
+
+{% block content %}
+    <form action="" method="POST" autocomplete="off">
+        {%csrf_token%}
+        <input type="text" name="username" placeholder="username"><br><br>
+        <input type="password" name="password" placeholder="password"><br>
+        <br>
+        <button class="button" type="submit">submit</button>
+    </form>
+    <div>
+        {%for message in messages%}<!--print messages in mesage box-->
+        <h4>{{message}}</h4>
+        {%endfor%}
+    </div>
+    
+{% endblock content %}

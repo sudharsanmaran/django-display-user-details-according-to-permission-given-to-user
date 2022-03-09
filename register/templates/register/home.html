@@ -1,0 +1,29 @@
+{% extends "register/base.html" %}
+
+
+{% block content %}
+<style>
+    body {
+      background-image: url('.jpg');
+    }
+    </style>
+    {%if user.is_authenticated %}
+    <li>hello,{{user.username}}</li>
+    </a>
+    <a href="logout/">
+        <button class="button">logout</button>
+    </a>
+    {% else %}
+    
+    <a href="login/">
+        <button class="button">login</button>
+    </a>
+    <br>
+    <br>
+    <a href="register/">
+    <button class="button">register</button>
+    </a>
+   
+
+    {%endif%}
+{% endblock %}

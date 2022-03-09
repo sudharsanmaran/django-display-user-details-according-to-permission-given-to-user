@@ -1,0 +1,14 @@
+{% extends "register/base.html" %}
+
+{% block content %}
+<p>r u sure u wana delete {{current_user}}</p>
+<a href="/show/">
+    <button class="button">cancel</button>
+</a>
+<br>
+<br>
+<a href="/real_delete/">
+    <button class="button">cofirm</button>
+</a>
+
+{%endblock%}

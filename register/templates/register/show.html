@@ -1,0 +1,32 @@
+{% extends "register/base.html" %}
+
+
+{% block content %}
+    <h3>welcome {{current_user}}</h3>
+    {%for i in userdetail%}
+    
+    {{i}}
+    {%endfor%}
+    <hr>
+    
+    {%if val%}
+    <h3>employees details</h3>
+        {%for user in val %}
+            {{user}}
+            <br>
+        {%endfor%}
+    {%endif%}
+    <br>
+    
+   <div>
+    <a href="/update/">
+        <button class="button">update</button>
+    </a>
+
+    
+    <a href="/delete/">
+        <button class="button">delete</button>
+    </a>
+   </div>
+    
+{%endblock%}
